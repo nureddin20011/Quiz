@@ -1,0 +1,10 @@
+printf "Select a number between 5-12 (inclusive):"
+read in_num;
+while [[ $in_num != +([0-9]) ]] || (( in_num < 5 || in_num > 12 ));
+
+do
+    printf "The input you entered isn't between 5-12\n"
+    printf "Please select another number: "
+    read in_num; 
+done 
+printf "All done!"
